@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="dropdown_widget.js"></script>
+</head>
+<body>
+        <h1 class="PageTitle">Dropdown Widget - Textbox</h1>
+
+        <!--Note to all who visit this page-->
+        <p class="Note">This is a dropdown widget, with options that the user provides and in addition to it
+            has a "Create New" option, which on selection converts the dropdoen into a textbox. This is useful
+            when user of an application needs a flexibility in adding his own item other than the optiond available in dropdown
+        </p>
+<div id="displayVal"></div>
+
+<script>
+
+var dd = new Dropdown("Colors", ["red", "blue", "green"], document.body);
+
+function ShowVal(){
+    document.getElementById("displayVal").innerHTML = "";
+
+    var value = dd.getValue();
+    document.getElementById("displayVal").innerHTML = value;
+}
+</script>
+<button onClick="ShowVal();">Submit</button>
+</body>
+</html>
