@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="treeView.css">
+    <script type="text/javascript" src="treeView.js"></script>
+<title> Treeiew </title>
+</head>
+
+<body>
+<h1 class="PageTitle">TreeView</h1>
+
+<!--Note to all who visit this page-->
+<p class="Note">This is a tree view widget with single level of parent and child elements.
+	It allows for customization of icons and also onClick events to direct to desired location
+</p>
+<script>
+
+var elements = [{parent:"Parent-1", child:["Child-1","Child-2"]},
+				{parent:"Parent-2", child:["Child-1","Child-2","Child-3","Child-4"]}
+				];
+
+//Creating the widget by passing required @params
+var tt = new TreeView( elements, "plus.png","minus.png", document.body);
+tt.addEvent(0, function(){ window.location = "http://www.google.com"; });
+tt.addEvent(1, function(){ window.location = "http://www.thoughtsweaver.info"; });
+tt.addEvent(2, function(){ window.location = "http://www.kayak.com"; });
+
+</script>
+</body>
+</html>

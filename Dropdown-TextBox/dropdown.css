@@ -5,8 +5,13 @@
     text-align: justify;
 }   
 
-.displayVal
+#displayDiv
 {
+    color:white;
     font-size: 18px;
     font-weight:bold;
+    width:100px;
+    height:40px;
+    text-align:center;
+    margin:20px;
 }

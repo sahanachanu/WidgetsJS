@@ -1,0 +1,17 @@
+.Note
+{
+    font-size: 18px;
+    font-style: italic;
+    text-align: justify;
+}   
+
+.MaxMinIcon
+{
+    width:25px; 
+    height:25px;
+}
+
+.ChildElement
+{
+    margin:20px;
+}

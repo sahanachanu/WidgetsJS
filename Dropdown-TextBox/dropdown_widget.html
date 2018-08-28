@@ -2,29 +2,31 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<script src="dropdown_widget.js"></script>
+    <link rel="stylesheet" type="text/css" href="dropdown.css">
+    <script type="text/javascript" src="dropdown_widget.js"></script>
+<title> Dropdown-TextBox Sample </title>
 </head>
-<body>
-        <h1 class="PageTitle">Dropdown Widget - Textbox</h1>
 
-        <!--Note to all who visit this page-->
-        <p class="Note">This is a dropdown widget, with options that the user provides and in addition to it
-            has a "Create New" option, which on selection converts the dropdoen into a textbox. This is useful
-            when user of an application needs a flexibility in adding his own item other than the optiond available in dropdown
-        </p>
-<div id="displayVal"></div>
+<body>
+<h1 class="PageTitle">Dropdow-nTextBox widget</h1>
+
+<!--Note to all who visit this page-->
+<p class="Note">This is a dropdown widget that turns into a textbox,
+    on selecting "Create New". It adds the textbox value to the dropdown list and thereby makes it a part of dropdown.
+    This allows customizing the dropdown options for users
+</p>
 
 <script>
 
-var dd = new Dropdown("Colors", ["red", "blue", "green"], document.body);
+var dd = new Dropdown("Colors", ["","red", "blue", "green"], document.body);
 
-function ShowVal(){
-    document.getElementById("displayVal").innerHTML = "";
-
-    var value = dd.getValue();
-    document.getElementById("displayVal").innerHTML = value;
+function doThis(){
+    document.getElementById("displayDiv").innerHTML = dd.getValue();
+    document.getElementById("displayDiv").style.backgroundColor = dd.getValue();
 }
+console.log(dd.getValue());
 </script>
-<button onClick="ShowVal();">Submit</button>
+<button onClick="doThis();">Add</button>
+<div id="displayDiv"></div>
 </body>
 </html>
